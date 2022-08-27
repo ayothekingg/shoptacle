@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <nav className="font-merriweather text-primary  lg:flex mb-24 md:ml-20 my-5 text-sm ">
+    <nav className="font-merriweather  text-primary  lg:flex md:ml-20 my-5 text-sm ">
       <div className=" md:flex-[1_0_0%] lg:flex-[1_0_10%] cursor-pointer">
         <svg
           className="mt-2"

@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         neutrall: "#9c9c9c",
         primary: "#121212",
+        primaryII: "#F1E4BC",
         secondary: "#3A3A3A",
         buttonWhite: "#fdfdfd",
         buttonBlack: "#1b1b1b",
