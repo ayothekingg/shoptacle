@@ -1,12 +1,11 @@
 /** @format */
 import React from "react";
-import homeImg from "./shoptacleHome.jpg";
 
 const Home = () => {
   return (
-    <section className="font-merriweather mb-40 max-w-full lg:h-screen md:justify-center  bg-primaryII overflow-hidden ">
+    <section className="font-merriweather mb-40 max-w-full lg:h-screen bg-primaryII overflow-hidden ">
       <div className="flex flex-col lg:flex-row  lg:py-12  lg:ml-20  ">
-        <div className="flex flex-col items-center lg:flex-[0_0_52%] justify-center h-screen md:h-max">
+        <div className="flex flex-col  lg:flex-[0_0_52%]  justify-center  h-screen md:h-max">
           <div className="text-center max-w-lg lg:max-w-xl w-full [&>*]:mb-5 lg:text-start">
             <h1 className="text-5xl lg:text-5xl lg:leading-[70px] font-bold ">
               Fashion Shopping Made Easier With Shoptacle...
