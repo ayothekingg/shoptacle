@@ -33,6 +33,11 @@ const Collection = () => {
           </div>
         </div>
       </div>{" "}
+      <div className="flex justify-center">
+        <button className=" font-oswald border-none rounded-sm py-2 px-12 mt-12 text-2xl text-white leading-[36px]  border-2 bg-buttonBlack hover:text-black hover:bg-buttonWhite">
+          Shop Now
+        </button>
+      </div>
     </section>
   );
 };
