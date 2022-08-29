@@ -6,7 +6,7 @@ import call from "./grid3.jpg";
 
 const Shops = () => {
   return (
-    <section className="font-merriweather max-w-[1240px] lg:ml-20">
+    <section className="mb-40  font-merriweather max-w-[1240px] lg:ml-20">
       <div className="flex flex-col items-center">
         <h1 className="text-center text-xl font-bold md:text-4xl">
           Why Shop With Us?
@@ -19,8 +19,8 @@ const Shops = () => {
       </div>
 
       <div className="max-w-[1120px]  flex flex-col  items-center md:grid  md:grid-cols-2 lg:grid-cols-3 md:mt-8 md:gap-14 md:ml-8 [&>div]:my-4  ">
-        <div className="flex flex-col items-center max-w-sm">
-          <img src={bead} width="350" height="350" alt="bead-picture" />
+        <div className="flex flex-col items-center max-w-sm ">
+          <img src={bead} alt="bead-picture" />
           <h1 className="text-xl md:text-2xl font-bold text-center">
             Luxury & Quality
           </h1>
