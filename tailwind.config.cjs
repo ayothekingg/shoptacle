@@ -14,6 +14,7 @@ module.exports = {
         secondary: "#3A3A3A",
         buttonWhite: "#fdfdfd",
         buttonBlack: "#1b1b1b",
+        main: "#d4af37",
       },
 
       fontFamily: {

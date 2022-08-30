@@ -8,7 +8,7 @@ import watch from "./watch.jpg";
 
 const Collection = () => {
   return (
-    <section className="font-merriweather md:max-w-[1240px] lg:ml-20 ">
+    <section className="mb-40 font-merriweather md:max-w-[1240px] lg:ml-20 ">
       {" "}
       <h1 className="text-center text-xl font-bold md:text-4xl mb-16">
         Shop Our Collections...
@@ -34,7 +34,7 @@ const Collection = () => {
         </div>
       </div>{" "}
       <div className="flex justify-center">
-        <button className=" font-oswald border-none rounded-sm py-2 px-12 mt-12 text-2xl text-white leading-[36px]  border-2 bg-buttonBlack hover:text-black hover:bg-buttonWhite">
+        <button className="hover:border-buttonBlack hover:border-2  font-oswald  rounded-sm py-2 px-12 mt-12 text-2xl text-white leading-[36px]  border-2 bg-buttonBlack hover:text-black hover:bg-buttonWhite">
           Shop Now
         </button>
       </div>

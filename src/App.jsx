@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import Shops from "./components/Shopjs/Shops";
 import Collection from "./components/Collections/Collection";
+import Deals from "./components/Deals/Deals";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Home />
       <Shops />
       <Collection />
+      <Deals />
     </div>
   );
 };

@@ -6,7 +6,7 @@ import call from "./grid3.jpg";
 
 const Shops = () => {
   return (
-    <section className="mb-40  font-merriweather max-w-[1240px] lg:ml-20">
+    <section className=" font-merriweather max-w-[1240px] lg:ml-20 mb-40">
       <div className="flex flex-col items-center">
         <h1 className="text-center text-xl font-bold md:text-4xl">
           Why Shop With Us?
