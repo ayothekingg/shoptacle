@@ -16,6 +16,8 @@ module.exports = {
         buttonBlack: "#1b1b1b",
         main: "#d4af37",
         barBG: "#f4f4f4",
+        neutralII: "#5b5b5b",
+        buttonBrown: "#888888",
       },
 
       fontFamily: {
