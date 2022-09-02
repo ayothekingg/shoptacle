@@ -7,6 +7,7 @@ import Collection from "./components/Collections/Collection";
 import Deals from "./components/Deals/Deals";
 import Client from "./components/Client/Client";
 import Subscribe from "./components/Subscribe/Subscribe";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Deals />
       <Client />
       <Subscribe />
+      <Footer />
     </div>
   );
 };

@@ -18,6 +18,8 @@ module.exports = {
         barBG: "#f4f4f4",
         neutralII: "#5b5b5b",
         buttonBrown: "#888888",
+        footerBg: "#121212",
+        footer: "#fdfdfd",
       },
 
       fontFamily: {
