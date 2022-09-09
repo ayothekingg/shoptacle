@@ -1,25 +1,19 @@
 /** @format */
 import React from "react";
 import Navbar from "./components/Navbar/Navbar";
-import Home from "./components/Home/Home";
-import Shops from "./components/Shopjs/Shops";
-import Collection from "./components/Collections/Collection";
-import Deals from "./components/Deals/Deals";
-import Client from "./components/Client/Client";
-import Subscribe from "./components/Subscribe/Subscribe";
-import Footer from "./components/Footer/Footer";
+import { Routes, Route } from "react-router-dom";
 
+import Body from "./components/Homejs/Body";
+import SignUp from "./components/routes/SignUp/Signup";
 const App = () => {
   return (
     <div className="App">
       <Navbar />
-      <Home />
-      <Shops />
-      <Collection />
-      <Deals />
-      <Client />
-      <Subscribe />
-      <Footer />
+
+      <Routes>
+        <Route path="/" element={<Body />} />
+        <Route path="/signup" element={<SignUp />} />
+      </Routes>
     </div>
   );
 };

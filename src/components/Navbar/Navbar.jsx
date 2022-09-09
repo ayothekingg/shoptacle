@@ -1,5 +1,6 @@
 /** @format */
 import React from "react";
+import { Link } from "react-router-dom";
 import { IoIosMenu } from "react-icons/io";
 import { useState } from "react";
 
@@ -42,9 +43,10 @@ const Navbar = () => {
       >
         <ul className="[&>*]:text-neutrall  text-center [&>*]:my-12 lg:[&>*]:inline [&>*]:mx-5 pt-4  ">
           <li>
-            <a className="active:text-primary" href="#">
+            <Link to="/" className="active:text-primary">
+              {" "}
               Home
-            </a>
+            </Link>
           </li>
           <li>
             <a className=" " href="#">
@@ -81,9 +83,12 @@ const Navbar = () => {
           Log In
         </button>
 
-        <button className="ml-4 text-lg font-oswald text-buttonWhite bg-buttonBlack py-2 px-6 border-solid border-button ` hover:bg-buttonWhite hover:text-buttonBlack hover:border-buttonBlack hover:border-2 rounded-[4px] ">
-          Sign Up
-        </button>
+        <Link to="/signup">
+          {" "}
+          <button className="ml-4 text-lg font-oswald text-buttonWhite bg-buttonBlack py-2 px-6 border-solid border-button ` hover:bg-buttonWhite hover:text-buttonBlack hover:border-buttonBlack hover:border-2 rounded-[4px] ">
+            Sign Up
+          </button>
+        </Link>
       </div>
     </nav>
   );
