@@ -20,6 +20,7 @@ module.exports = {
         buttonBrown: "#888888",
         footerBg: "#121212",
         footer: "#fdfdfd",
+        welcome: "#f6efd7",
       },
 
       fontFamily: {

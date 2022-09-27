@@ -1,6 +1,7 @@
 /** @format */
 
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -16,9 +17,11 @@ const Home = () => {
               webshop, you can now shop for all your fashion accessories with
               ease...
             </h2>
-            <button className="font-oswald  rounded-sm py-2 px-6 text-2xl text-white leading-[36px]   bg-buttonBlack hover:text-black  border-[1px] hover:bg-buttonWhite hover:border-black">
-              Start Shopping
-            </button>
+            <Link to="/signup">
+              <button className="font-oswald  rounded-sm py-2 px-6 text-2xl text-white leading-[36px]   bg-buttonBlack hover:text-black  border-[1px] hover:bg-buttonWhite hover:border-black">
+                Start Shopping
+              </button>
+            </Link>
           </div>
         </div>
         <div className="  relative ">

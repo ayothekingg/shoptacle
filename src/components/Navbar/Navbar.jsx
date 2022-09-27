@@ -2,9 +2,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { IoIosMenu } from "react-icons/io";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { UserContext } from "../../contexts/context";
+import { signOutUser } from "../../utils/firebase/firebase";
 
 const Navbar = () => {
+  const { currentUser } = useContext(UserContext);
+
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
@@ -79,16 +83,31 @@ const Navbar = () => {
             : "lg:flex flex-[1_0_10%] hidden"
         }
       >
-        <button className="font-oswald text-lg text-buttonBlack  bg-buttonWhite py-2 px-6 border-solid border-2 border-buttonBlack ` hover:bg-buttonBlack hover:text-buttonWhite rounded-[4px]  ">
-          Log In
-        </button>
+        {currentUser ? (
+          ""
+        ) : (
+          <Link to="/login">
+            <button className="font-oswald text-lg text-buttonBlack  bg-buttonWhite py-2 px-6 border-solid border-2 border-buttonBlack `  rounded-[4px]  ">
+              Log In
+            </button>
+          </Link>
+        )}
 
-        <Link to="/signup">
-          {" "}
-          <button className="ml-4 text-lg font-oswald text-buttonWhite bg-buttonBlack py-2 px-6 border-solid border-button ` hover:bg-buttonWhite hover:text-buttonBlack hover:border-buttonBlack hover:border-2 rounded-[4px] ">
-            Sign Up
-          </button>
-        </Link>
+        {currentUser ? (
+          <span
+            className="ml-24 border-2 text-lg font-oswald text-buttonWhite bg-buttonBlack py-2 px-6 border-solid border-black ` hover:border-buttonBlack  rounded-[4px] cursor-pointer "
+            onClick={signOutUser}
+          >
+            Log out
+          </span>
+        ) : (
+          <Link to="/signup">
+            {" "}
+            <button className="ml-4 border-2 text-lg font-oswald text-buttonWhite bg-buttonBlack py-2 px-6 border-solid border-black ` hover:border-buttonBlack  rounded-[4px] ">
+              Sign Up
+            </button>
+          </Link>
+        )}
       </div>
     </nav>
   );

@@ -5,6 +5,7 @@ import bag from "./bag.jpg";
 import bead from "./bead.jpg";
 import tie from "./tie.jpg";
 import watch from "./watch.jpg";
+import { Link } from "react-router-dom";
 
 const Collection = () => {
   return (
@@ -34,9 +35,11 @@ const Collection = () => {
         </div>
       </div>{" "}
       <div className="flex justify-center">
-        <button className="hover:border-buttonBlack hover:border-2  font-oswald  rounded-sm py-2 px-12 mt-12 text-2xl text-white leading-[36px]  border-2 bg-buttonBlack hover:text-black hover:bg-buttonWhite">
-          Shop Now
-        </button>
+        <Link to="/signup">
+          <button className="hover:border-buttonBlack hover:border-2  font-oswald  rounded-sm py-2 px-12 mt-12 text-2xl text-white leading-[36px]  border-2 bg-buttonBlack hover:text-black hover:bg-buttonWhite">
+            Shop Now
+          </button>
+        </Link>
       </div>
     </section>
   );
