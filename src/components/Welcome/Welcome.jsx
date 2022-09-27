@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Welcome = () => {
   return (
     <section className="font-merriweather bg-welcome [&>*]:py-4 md:h-screen">
-      <div className="flex flex-col justify-center">
+      <div className="flex flex-col items-center">
         <svg
           className="m-auto"
           width="121"
@@ -92,13 +92,15 @@ const Welcome = () => {
           />
         </svg>
         <h1 className="text-xl md:text-5xl font-bold text-center">
-          Welcome to <span className="text-main italic">Shoptacle</span>
+          Welcome to <span className="text-main italic">Shoptacle</span>!
         </h1>
       </div>
-      <div className="flex flex-col justify-center md:grid lg:grid-cols-4 md:grid-cols-2 md:ml-8">
+      <div className="flex flex-col items-center justify-center md:grid lg:grid-cols-4 md:grid-cols-2 md:ml-8 [&>*]:my-4">
         <div className="relative cursor-pointer hover:scale-110">
           <img src={frame1} alt="frame-1" width="270" />
-          <h1 className="absolute top-0 left-2 md:text-2xl">Browse</h1>
+          <h1 className="text-center absolute top-0  left-2 md:text-2xl">
+            Browse
+          </h1>
         </div>
         <div className="relative cursor-pointer hover:scale-110">
           <img src={frame2} alt="frame-2" width="270" />
@@ -114,9 +116,9 @@ const Welcome = () => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row justify-center">
+      <div className="flex flex-col md:flex-row justify-center items-center">
         <Link to="/signup">
-          <button className=" font-oswald  rounded-sm py-2 px-6 text-2xl text-white leading-[36px]   bg-buttonBlack hover:text-black  border-[1px] hover:bg-buttonWhite hover:border-black">
+          <button className=" font-oswald  rounded-sm py-2 px-12 text-2xl text-white leading-[36px]   bg-buttonBlack hover:text-black  border-[1px] hover:bg-buttonWhite hover:border-black">
             Get Started
           </button>
         </Link>
