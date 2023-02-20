@@ -1,13 +1,23 @@
 // import Cart from "./Cart";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Carts = ({ cart }) => {
   return (
     <section>
       <div>
-        <h1>Carts({cart.total_unique_items})</h1>
+        <div className="flex justify-between max-w-[1240px] lg:ml-20">
+          <h1 className="text-3xl font-semibold font-merriweather">
+            Carts({cart.total_unique_items})
+          </h1>
+
+          <Link to="/arrivals">
+            {" "}
+            <h1 className="font-oswald text-main">Keep Shopping </h1>
+          </Link>
+        </div>
         <table>
-          <tr className="">
+          <tr className="bg-welcome md:[&>*]:px-20  md:[&>*]:py-2 [&>*]:text-center w-full ">
             <th>Products</th>
             <th>Description</th>
             <th>Amount</th>
@@ -16,9 +26,16 @@ const Carts = ({ cart }) => {
             <th>Action</th>
           </tr>
           {cart?.line_items?.map((items) => (
-            <tr>
-              <td>
-                <img className="w-24" src={items.image.url} alt={items.name} />
+            <tr className="text-center ">
+              <td className="">
+                <div className="flex justify-center">
+                  {" "}
+                  <img
+                    className="w-24"
+                    src={items.image.url}
+                    alt={items.name}
+                  />
+                </div>
               </td>
               <td>{items.name}</td>
               <td>{items.price.formatted_with_symbol}</td>
@@ -79,6 +96,20 @@ const Carts = ({ cart }) => {
             </tr>
           ))}
         </table>
+
+        <div className=" max-w-[1240px] lg:ml-20">
+          <div className="mt-10">
+            <h1 className="font-oswald text-lg mb-2">Do you have a coupon?</h1>
+            <input
+              placeholder="Enter Coupon Code"
+              className="font-oswald max-w-xs w-full py-2 border-2 border-secondary  placeholder:text-sm"
+            />{" "}
+            <span className="ml-2 border-2 text-sm font-oswald text-buttonWhite bg-buttonBlack py-2 px-6 border-solid border-black ` hover:border-buttonBlack  rounded-[4px] cursor-pointer  ">
+              Apply Coupon
+            </span>
+          </div>
+          <div></div>
+        </div>
       </div>
     </section>
   );

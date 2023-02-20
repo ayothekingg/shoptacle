@@ -102,10 +102,12 @@ const Welcome = () => {
             Browse
           </h1>
         </div>
-        <div className="relative cursor-pointer hover:scale-110">
-          <img src={frame2} alt="frame-2" width="270" />
-          <h1 className="absolute top-0 left-2 md:text-2xl">Shop</h1>
-        </div>
+        <Link to="/arrival">
+          <div className="relative cursor-pointer hover:scale-110">
+            <img src={frame2} alt="frame-2" width="270" />
+            <h1 className="absolute top-0 left-2 md:text-2xl">Shop</h1>
+          </div>
+        </Link>
         <div className="relative cursor-pointer hover:scale-110">
           <img src={frame3} alt="frame-3" width="270" />
           <h1 className="absolute top-0 left-2 md:text-2xl">Order</h1>

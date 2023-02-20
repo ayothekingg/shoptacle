@@ -21,6 +21,10 @@ module.exports = {
         footerBg: "#121212",
         footer: "#fdfdfd",
         welcome: "#f6efd7",
+        navbar: "#888888",
+        navone: "#040404",
+        success: "#4CAF50",
+        error: " #BD2B45",
       },
 
       fontFamily: {

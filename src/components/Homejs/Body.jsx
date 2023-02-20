@@ -1,5 +1,6 @@
 /** @format */
 import React from "react";
+import Navbar from "./Navbar";
 import Home from "./Home";
 import Shops from "./Shops";
 import Collection from "./Collection";
@@ -11,6 +12,7 @@ import Footer from "./Footer";
 const Body = () => {
   return (
     <div>
+      <Navbar />
       <Home />
       <Shops />
       <Collection />
