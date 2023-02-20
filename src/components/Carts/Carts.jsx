@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Carts = ({ cart }) => {
+  console.log(cart);
   return (
     <section>
       <div>
@@ -97,8 +98,8 @@ const Carts = ({ cart }) => {
           ))}
         </table>
 
-        <div className=" max-w-[1240px] lg:ml-20">
-          <div className="mt-10">
+        <div className=" flex flex-col md:flex-row justify-between w-full max-w-[1240px] lg:ml-20 ">
+          <div className="flex-1 mt-10 max-w-lg ml-3">
             <h1 className="font-oswald text-lg mb-2">Do you have a coupon?</h1>
             <input
               placeholder="Enter Coupon Code"
@@ -108,7 +109,29 @@ const Carts = ({ cart }) => {
               Apply Coupon
             </span>
           </div>
-          <div></div>
+
+          <div className="w-full self-center mt-10 flex flex-1 flex-col font-oswald max-w-[250px] [&>*]:my-3 ">
+            <div className="flex justify-between">
+              <h1>Sub Total</h1>
+              <h1>{cart?.subtotal?.formatted_with_symbol}</h1>
+            </div>
+            <div className="flex justify-between">
+              <h1>Shipping Fee</h1>
+              <h1 className="text-success">FREE</h1>
+            </div>
+            <div className="flex justify-between">
+              <h1>Delivery Fee</h1>
+              <h1 className="text-success">FREE</h1>
+            </div>
+            <div className="pt-3 flex justify-between border-t-2 border-secondary">
+              <h1 className="font-merriweather font-bold">Total</h1>
+              <h1>{cart?.subtotal?.formatted_with_symbol}</h1>
+            </div>
+
+            <button className="text-center ml-2 border-2 text-sm font-oswald text-buttonWhite bg-buttonBlack py-2 px-6 border-solid border-black ` hover:border-buttonBlack  rounded-[4px]  hover:text-success ">
+              Proceed to Checkout
+            </button>
+          </div>
         </div>
       </div>
     </section>
