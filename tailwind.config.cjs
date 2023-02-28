@@ -25,6 +25,7 @@ module.exports = {
         navone: "#040404",
         success: "#4CAF50",
         error: " #BD2B45",
+        shipping: "#b0b0b0",
       },
 
       fontFamily: {

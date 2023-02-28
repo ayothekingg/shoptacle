@@ -18,9 +18,9 @@ const Client = () => {
         <path
           d="M45 52.5L32.5 40L45 27.5"
           stroke="#FDFDFD"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
 
@@ -34,9 +34,9 @@ const Client = () => {
         <path
           d="M35 27.5L47.5 40L35 52.5"
           stroke="#FDFDFD"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
 

@@ -4,7 +4,7 @@ const Product = ({ product, onAddToCart }) => {
   return (
     <div>
       <div className="relative">
-        <img src={product.image.url} width="" alt={product.name} srcset="" />
+        <img src={product.image.url} width="" alt={product.name} srcSet="" />
         <h1 className="font-bold text-lg">{product.name}</h1>
         <div className="justify-between flex font-oswald">
           <h1>{product.price.formatted_with_symbol}</h1>
@@ -49,9 +49,9 @@ const Product = ({ product, onAddToCart }) => {
               <path
                 d="M3.96562 6.75H20.7844L18.3094 15.4125C18.2211 15.7269 18.032 16.0036 17.7711 16.2C17.5103 16.3965 17.1922 16.5019 16.8656 16.5H7.88437C7.55783 16.5019 7.2397 16.3965 6.97886 16.2C6.71803 16.0036 6.52893 15.7269 6.44062 15.4125L3.04688 3.54375C3.00203 3.38696 2.9073 3.24905 2.77704 3.15093C2.64677 3.05282 2.48808 2.99983 2.325 3H0.75"
                 stroke="#121212"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </button>
@@ -66,9 +66,9 @@ const Product = ({ product, onAddToCart }) => {
               <path
                 d="M12.5349 19.8658L20.1286 12.272C21.9942 10.397 22.2661 7.33138 20.5036 5.372C20.0616 4.87823 19.5236 4.47977 18.9223 4.20096C18.3211 3.92215 17.6694 3.76885 17.0069 3.75042C16.3445 3.73199 15.6852 3.84883 15.0694 4.09379C14.4536 4.33875 13.8943 4.70669 13.4255 5.17513L12.0005 6.6095L10.7724 5.372C8.89737 3.50638 5.83175 3.2345 3.87237 4.997C3.3786 5.43902 2.98013 5.97707 2.70132 6.57829C2.42251 7.1795 2.26921 7.83124 2.25079 8.4937C2.23236 9.15616 2.3492 9.81542 2.59416 10.4312C2.83912 11.047 3.20706 11.6063 3.6755 12.0751L11.4661 19.8658C11.6083 20.0066 11.8004 20.0856 12.0005 20.0856C12.2006 20.0856 12.3927 20.0066 12.5349 19.8658V19.8658Z"
                 stroke="#121212"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </button>
