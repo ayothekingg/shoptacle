@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm, FormProvider } from "react-hook-form";
 import Footer from "../Homejs/Footer.jsx";
 
@@ -47,6 +47,12 @@ const Shipping = ({ next, checkoutToken }) => {
   useEffect(() => {
     if (country) fetchSubdivisions(country);
   }, [country]);
+
+  const navigate = useNavigate();
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    navigate("/payment");
+  };
 
   return (
     <section>
@@ -121,11 +127,7 @@ const Shipping = ({ next, checkoutToken }) => {
           </span>
         </span>
         <FormProvider {...methods}>
-          <form
-            onSubmit={methods.handleSubmit((data) =>
-              next({ ...data, country, subdivision })
-            )}
-          >
+          <form onSubmit={handleSubmit}>
             <div className=" border-[1px] rounded-md border-footerBg my-8 mx-4">
               <div className="my-8 mx-6 [&>input]:mb-5 [&>select]:mb-5">
                 <h1 className="font-merriweather text-lg md:text-2xl font-bold text-center">
@@ -143,6 +145,7 @@ const Shipping = ({ next, checkoutToken }) => {
                   name="email address"
                   className="w-full max-w-lg border-[1px] border-footerBg rounded placeholder:font-oswald text-xs text-navbar font-bold leading-5 py-3
             "
+                  required
                   placeholder="Enter Your Email Address"
                 />
                 <label
@@ -157,6 +160,7 @@ const Shipping = ({ next, checkoutToken }) => {
                   name="fullname"
                   label="Full name"
                   className="w-full max-w-lg border-[1px] border-footerBg rounded placeholder:font-oswald text-xs  text-navbar font-bold leading-5 py-3
+
             "
                 />
                 <label
@@ -225,14 +229,13 @@ const Shipping = ({ next, checkoutToken }) => {
             "
                   placeholder=""
                 />
-                <Link to="/payment">
-                  <button
-                    type="submit"
-                    className="text-center w-full border-2 text-sm font-oswald text-buttonWhite bg-buttonBlack py-2 px-6 border-solid border-black ` hover:border-buttonBlack  rounded-[4px]  hover:text-success "
-                  >
-                    Proceed to Payment
-                  </button>
-                </Link>
+
+                <button
+                  type="submit"
+                  className="text-center w-full border-2 text-sm font-oswald text-buttonWhite bg-buttonBlack py-2 px-6 border-solid border-black ` hover:border-buttonBlack  rounded-[4px]  hover:text-success "
+                >
+                  Proceed to Payment
+                </button>
               </div>
             </div>
           </form>

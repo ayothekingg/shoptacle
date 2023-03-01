@@ -115,11 +115,36 @@ const Arrivals = ({ onAddToCart, removeCart, cart }) => {
               />
             </svg>
           </Link>
-          <img
-            className="w-10 h-10 rounded-full cursor-pointer"
-            src={currentUser?.photoURL}
-            alt="user profile"
-          />
+          {currentUser ? (
+            <img
+              className="w-10 h-10 rounded-full cursor-pointer"
+              src={currentUser?.photoURL}
+              alt="user profile"
+            />
+          ) : (
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20 25C25.5228 25 30 20.5228 30 15C30 9.47715 25.5228 5 20 5C14.4772 5 10 9.47715 10 15C10 20.5228 14.4772 25 20 25Z"
+                stroke="#121212"
+                strokeWidth="2.5"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M4.84375 33.7502C6.37959 31.0895 8.5888 28.8799 11.2493 27.3437C13.9098 25.8075 16.9278 24.9988 20 24.9988C23.0722 24.9988 26.0902 25.8075 28.7507 27.3437C31.4112 28.8799 33.6204 31.0895 35.1562 33.7502"
+                stroke="#121212"
+                strokeWidth="2.5"
+                stroke-linecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          )}
+
           <button className="absolute w-4 right-1/3 rounded-full bg-primaryII border-none outline-none">
             {cart?.total_items && <h1>{cart.total_unique_items}</h1>}
           </button>
