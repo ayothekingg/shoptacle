@@ -51,6 +51,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/"
+              aria-label="homepage"
               className="active:text-primary"
               onClick={() => {
                 setIsExpanded(false);
@@ -65,7 +66,7 @@ const Navbar = () => {
               setIsExpanded(false);
             }}
           >
-            <a className=" " href="#">
+            <a className=" " href="#" aria-label="about-page">
               About Us
             </a>
           </li>
@@ -74,7 +75,7 @@ const Navbar = () => {
               setIsExpanded(false);
             }}
           >
-            <a className=" " href="#">
+            <a className=" " href="#" aria-label="collection-page">
               Our Collections
             </a>
           </li>
@@ -89,6 +90,7 @@ const Navbar = () => {
               }}
               className=" "
               href="#"
+              aria-label="blog-page"
             >
               Blogs
             </a>
@@ -99,7 +101,7 @@ const Navbar = () => {
               setIsExpanded(false);
             }}
           >
-            <a className=" " href="#">
+            <a className=" " href="#" aria-label="contact-page">
               Contact Us
             </a>
           </li>
